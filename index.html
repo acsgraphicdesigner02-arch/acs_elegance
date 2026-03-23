@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACS Elegance — Premium 2 BHK in Kundrathur</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0D1B3E;
+  --navy-mid: #152347;
+  --navy-light: #1E3060;
+  --sky: #1A6BAA;
+  --sky-light: #2E86CC;
+  --yellow: #F5C518;
+  --yellow-pale: #FDE68A;
+  --white: #FFFFFF;
+  --off-white: #F0F4FA;
+  --muted: #8FA3C0;
+  --text: #D6E4F7;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  background: rgba(13,27,62,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(245,197,24,0.2);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo-mark {
+  width: 36px;
+  height: 36px;
+  background: var(--yellow);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  flex-shrink: 0;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav-logo-acs {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+.nav-logo-sub {
+  font-size: 8px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.nav-cta {
+  background: var(--yellow);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-cta:hover {
+  background: var(--yellow-pale);
+  transform: translateY(-1px);
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1b3e 0%, #152347 40%, #1a3a6e 100%);
+}
+
+/* Animated background dots */
+.hero-bg-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: drift 20s linear infinite;
+}
+
+@keyframes drift {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(40px, 40px); }
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,107,170,0.25) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  pointer-events: none;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,197,24,0.08) 0%, transparent 70%);
+  bottom: 50px;
+  left: 50px;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  align-items: center;
+  padding: 100px 48px 60px;
+  gap: 40px;
+}
+
+/* Left col */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(245,197,24,0.1);
+  border: 1px solid rgba(245,197,24,0.35);
+  padding: 8px 18px;
+  width: fit-content;
+  animation: fadeSlideLeft 0.8s ease 0.2s both;
+}
+
+.hero-badge-dot {
+  width: 6px; height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.7); }
+}
+
+.hero-badge span {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5.5vw, 68px);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--white);
+  animation: fadeSlideLeft 0.8s ease 0.4s both;
+}
+
+.hero-title .accent {
+  color: var(--yellow);
+  font-style: italic;
+}
+
+.hero-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 1px;
+  animation: fadeSlideLeft 0.8s ease 0.5s both;
+}
+
+.hero-location svg { flex-shrink: 0; }
+
+.hero-location strong {
+  color: var(--text);
+  font-weight: 400;
+}
+
+/* Price block */
+.price-block {
+  background: var(--yellow);
+  padding: 24px 32px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  width: fit-content;
+  position: relative;
+  animation: fadeSlideLeft 0.8s ease 0.6s both;
+}
+
+.price-block::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(245,197,24,0.3);
+  pointer-events: none;
+}
+
+.price-from {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.price-value {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.price-onwards {
+  font-size: 11px;
+  color: rgba(13,27,62,0.65);
+  letter-spacing: 2px;
+}
+
+/* Features strip */
+.features-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  animation: fadeSlideLeft 0.8s ease 0.8s both;
+}
+
+.feature-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  font-size: 12px;
+  color: var(--text);
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.feature-pill:hover {
+  border-color: var(--yellow);
+  background: rgba(245,197,24,0.08);
+  color: var(--white);
+}
+
+.feature-pill svg { color: var(--yellow); flex-shrink: 0; }
+
+/* Right col — building card */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-end;
+  animation: fadeSlideRight 0.9s ease 0.5s both;
+}
+
+.building-card {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(21,35,71,0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.building-visual {
+  width: 100%;
+  height: 320px;
+  background: linear-gradient(160deg, #1e3060 0%, #0f2040 60%, #152347 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* SVG building illustration */
+.building-svg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+}
+
+/* Ground */
+.building-ground {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  height: 40px;
+  background: rgba(0,0,0,0.3);
+}
+
+.building-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: var(--yellow);
+  padding: 6px 14px;
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 1px;
+}
+
+.building-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(13,27,62,0.85);
+  border: 1px solid rgba(245,197,24,0.4);
+  padding: 6px 12px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.building-card-footer {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.building-card-stat {
+  text-align: center;
+}
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.stat-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* Urgent band */
+.urgent-band {
+  width: 100%;
+  max-width: 460px;
+  background: linear-gradient(90deg, rgba(245,197,24,0.15), rgba(245,197,24,0.05));
+  border: 1px solid rgba(245,197,24,0.25);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.urgent-icon {
+  width: 8px; height: 8px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.urgent-text {
+  font-size: 12px;
+  color: var(--yellow-pale);
+  letter-spacing: 1px;
+}
+
+.urgent-text strong {
+  font-weight: 500;
+  color: var(--yellow);
+}
+
+/* ── INFO SECTION ── */
+.info-section {
+  padding: 100px 48px;
+  background: var(--off-white);
+  color: var(--navy);
+}
+
+.info-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.info-eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--sky);
+  margin-bottom: 16px;
+}
+
+.info-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+
+.info-title em {
+  font-style: italic;
+  color: var(--sky);
+}
+
+.info-body {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #3A5070;
+  margin-bottom: 36px;
+}
+
+.info-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.info-cta:hover { background: var(--sky); }
+
+.info-cta svg { transition: transform 0.3s; }
+.info-cta:hover svg { transform: translateX(4px); }
+
+/* Amenity list */
+.amenity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(13,27,62,0.08);
+  transition: padding-left 0.3s;
+}
+
+.amenity-item:hover { padding-left: 8px; }
+.amenity-item:last-child { border-bottom: none; }
+
+.amenity-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: rgba(13,27,62,0.15);
+  width: 44px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.amenity-content {}
+
+.amenity-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.amenity-desc {
+  font-size: 12px;
+  color: #6A85A0;
+  letter-spacing: 0.5px;
+}
+
+.amenity-icon {
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(13,27,62,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sky);
+  flex-shrink: 0;
+}
+
+/* ── LOCATION SECTION ── */
+.location-section {
+  padding: 100px 48px;
+  background: var(--navy-mid);
+  position: relative;
+  overflow: hidden;
+}
+
+.location-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+}
+
+.location-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-head-text {}
+
+.loc-eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 12px;
+}
+
+.loc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+}
+
+.loc-title em {
+  font-style: italic;
+  color: var(--yellow);
+}
+
+.road-badge {
+  background: rgba(245,197,24,0.1);
+  border: 1px solid rgba(245,197,24,0.35);
+  padding: 12px 20px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--yellow-pale);
+  text-transform: uppercase;
+  max-width: 220px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Map placeholder */
+.map-placeholder {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, rgba(26,107,170,0.15), rgba(13,27,62,0.6));
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated concentric rings */
+.map-rings {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(245,197,24,0.25);
+  animation: expand 3s ease-out infinite;
+}
+
+.ring:nth-child(1) { width: 60px; height: 60px; animation-delay: 0s; }
+.ring:nth-child(2) { width: 110px; height: 110px; animation-delay: 0.8s; }
+.ring:nth-child(3) { width: 170px; height: 170px; animation-delay: 1.6s; }
+
+@keyframes expand {
+  0% { opacity: 0.8; transform: scale(0.9); }
+  100% { opacity: 0; transform: scale(1.2); }
+}
+
+.map-pin-center {
+  width: 20px;
+  height: 20px;
+  background: var(--yellow);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  z-index: 2;
+  position: relative;
+}
+
+.map-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.map-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── CTA SECTION ── */
+.cta-section {
+  background: linear-gradient(135deg, var(--navy-light), var(--navy));
+  padding: 100px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -60deg,
+    transparent,
+    transparent 30px,
+    rgba(245,197,24,0.02) 30px,
+    rgba(245,197,24,0.02) 31px
+  );
+}
+
+.cta-inner { position: relative; z-index: 1; }
+
+.cta-eyebrow {
+  font-size: 10px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+.cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.cta-quote {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-style: italic;
+  color: var(--yellow-pale);
+  margin-bottom: 52px;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--yellow);
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 18px 36px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(245,197,24,0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 18px 36px;
+  text-decoration: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.btn-outline:hover {
+  border-color: var(--yellow);
+  background: rgba(245,197,24,0.08);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #080E1E;
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(245,197,24,0.15);
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-mark {
+  width: 28px; height: 28px;
+  background: var(--yellow);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.footer-brand-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+.footer-center {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #3A5070;
+  text-align: center;
+}
+
+.footer-right {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+.footer-right a { color: var(--yellow); text-decoration: none; }
+
+/* Animations */
+@keyframes fadeSlideLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeSlideRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 14px 24px; }
+  .hero-inner { grid-template-columns: 1fr; padding: 80px 24px 40px; }
+  .hero-right { align-items: stretch; }
+  .building-card, .urgent-band { max-width: 100%; }
+  .info-section { padding: 60px 24px; }
+  .info-inner { grid-template-columns: 1fr; gap: 48px; }
+  .location-section { padding: 60px 24px; }
+  .cta-section { padding: 60px 24px; }
+  footer { padding: 24px; flex-direction: column; text-align: center; }
+  .section-header { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-mark"></div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-acs">ACS</span>
+      <span class="nav-logo-sub">Promoters</span>
+    </div>
+  </div>
+  <a class="nav-cta" href="tel:7066670666">Call Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-dots"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+
+  <div class="hero-inner">
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>New Launch · Kundrathur</span>
+      </div>
+
+      <h1 class="hero-title">
+        Premium 2 BHK<br>
+        Apartments in<br>
+        <span class="accent">Kundrathur</span>
+      </h1>
+
+      <div class="hero-location">
+        <svg width="14" height="18" viewBox="0 0 14 18" fill="none">
+          <path d="M7 0C3.13 0 0 3.13 0 7c0 4.88 7 11 7 11s7-6.12 7-11c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 114.5 7 2.5 2.5 0 017 9.5z" fill="#8FA3C0"/>
+        </svg>
+        <span><strong>100 Ft Main Road</strong> – Procession Road, Kundrathur</span>
+      </div>
+
+      <div class="price-block">
+        <span class="price-from">Starting From</span>
+        <span class="price-value">₹79 Lakhs</span>
+        <span class="price-onwards">onwards · all-inclusive*</span>
+      </div>
+
+      <div class="features-strip">
+        <div class="feature-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Spacious 2 BHK
+        </div>
+        <div class="feature-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Bank Loan Available
+        </div>
+        <div class="feature-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Covered Car Parking
+        </div>
+        <div class="feature-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          24/7 Water & Security
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <div class="building-card">
+        <div class="building-visual">
+          <div class="building-tag">ACS Elegance</div>
+
+          <!-- SVG Building Illustration -->
+          <svg class="building-svg" viewBox="0 0 260 320" xmlns="http://www.w3.org/2000/svg">
+            <!-- Main building body -->
+            <rect x="30" y="60" width="200" height="260" fill="#1E3A6E"/>
+            <rect x="30" y="60" width="200" height="260" fill="url(#buildGrad)"/>
+            <!-- Floors -->
+            <line x1="30" y1="130" x2="230" y2="130" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <line x1="30" y1="200" x2="230" y2="200" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <line x1="30" y1="270" x2="230" y2="270" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <!-- Windows row 1 -->
+            <rect x="50" y="80" width="35" height="30" rx="2" fill="rgba(245,197,24,0.6)"/>
+            <rect x="113" y="80" width="35" height="30" rx="2" fill="rgba(245,197,24,0.4)"/>
+            <rect x="176" y="80" width="35" height="30" rx="2" fill="rgba(245,197,24,0.7)"/>
+            <!-- Windows row 2 -->
+            <rect x="50" y="150" width="35" height="30" rx="2" fill="rgba(200,220,255,0.5)"/>
+            <rect x="113" y="150" width="35" height="30" rx="2" fill="rgba(245,197,24,0.55)"/>
+            <rect x="176" y="150" width="35" height="30" rx="2" fill="rgba(200,220,255,0.4)"/>
+            <!-- Windows row 3 -->
+            <rect x="50" y="220" width="35" height="30" rx="2" fill="rgba(245,197,24,0.5)"/>
+            <rect x="113" y="220" width="35" height="30" rx="2" fill="rgba(200,220,255,0.6)"/>
+            <rect x="176" y="220" width="35" height="30" rx="2" fill="rgba(245,197,24,0.45)"/>
+            <!-- Door -->
+            <rect x="103" y="280" width="54" height="40" rx="2" fill="rgba(0,0,0,0.4)"/>
+            <!-- Balconies -->
+            <rect x="42" y="108" width="54" height="6" fill="rgba(255,255,255,0.15)"/>
+            <rect x="105" y="108" width="54" height="6" fill="rgba(255,255,255,0.15)"/>
+            <rect x="168" y="108" width="54" height="6" fill="rgba(255,255,255,0.15)"/>
+            <!-- Rooftop accent -->
+            <rect x="30" y="52" width="200" height="10" fill="#F5C518" opacity="0.7"/>
+            <!-- Vertical design stripes -->
+            <rect x="100" y="60" width="6" height="260" fill="rgba(255,255,255,0.06)"/>
+            <rect x="154" y="60" width="6" height="260" fill="rgba(255,255,255,0.06)"/>
+            <defs>
+              <linearGradient id="buildGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="rgba(0,0,0,0.2)"/>
+                <stop offset="50%" stop-color="rgba(255,255,255,0.04)"/>
+                <stop offset="100%" stop-color="rgba(0,0,0,0.15)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <div class="building-ground"></div>
+          <div class="building-label">ACS Elegance</div>
+        </div>
+        <div class="building-card-footer">
+          <div class="building-card-stat">
+            <div class="stat-num">2 BHK</div>
+            <div class="stat-label">Configuration</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="building-card-stat">
+            <div class="stat-num">₹79L</div>
+            <div class="stat-label">Starting Price</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="building-card-stat">
+            <div class="stat-num">100Ft</div>
+            <div class="stat-label">Main Road</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="urgent-band">
+        <div class="urgent-icon"></div>
+        <div class="urgent-text"><strong>Limited Units Available</strong> — Book Your Dream Home Today!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO + AMENITIES -->
+<section class="info-section">
+  <div class="info-inner">
+    <div>
+      <div class="info-eyebrow">Why ACS Elegance</div>
+      <h2 class="info-title">
+        Designed for<br>
+        <em>Modern Living</em>
+      </h2>
+      <p class="info-body">
+        Nestled on the prestigious 100 Ft Main Road – Procession Road in Kundrathur,
+        ACS Elegance offers thoughtfully crafted 2 BHK residences that blend comfort,
+        connectivity, and lasting value. Experience urban living without compromise.
+      </p>
+      <a class="info-cta" href="tel:7066670666">
+        Enquire Now
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="amenity-list">
+      <div class="amenity-item">
+        <div class="amenity-num">01</div>
+        <div class="amenity-content">
+          <div class="amenity-name">Spacious 2 BHK Homes</div>
+          <div class="amenity-desc">Generous floor plans with natural light and ventilation</div>
+        </div>
+        <div class="amenity-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <div class="amenity-num">02</div>
+        <div class="amenity-content">
+          <div class="amenity-name">Bank Loan Available</div>
+          <div class="amenity-desc">Approved by leading banks for hassle-free financing</div>
+        </div>
+        <div class="amenity-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <div class="amenity-num">03</div>
+        <div class="amenity-content">
+          <div class="amenity-name">Covered Car Parking</div>
+          <div class="amenity-desc">Dedicated covered parking for every apartment</div>
+        </div>
+        <div class="amenity-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8zM5.5 19a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM18.5 19a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/></svg>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <div class="amenity-num">04</div>
+        <div class="amenity-content">
+          <div class="amenity-name">24/7 Water & Security</div>
+          <div class="amenity-desc">Uninterrupted water supply with round-the-clock security</div>
+        </div>
+        <div class="amenity-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location-section">
+  <div class="location-inner">
+    <div class="section-header">
+      <div class="section-head-text">
+        <div class="loc-eyebrow">Prime Connectivity</div>
+        <h2 class="loc-title">Located on the<br><em>100 Ft Main Road</em></h2>
+      </div>
+      <div class="road-badge">100 Ft Main Road · Procession Road · Kundrathur</div>
+    </div>
+
+    <div class="map-placeholder">
+      <div class="map-grid-lines"></div>
+      <div class="map-rings">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="map-pin-center"></div>
+      </div>
+      <div class="map-label">Kundrathur · Chennai</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Ready to Move In · Limited Units</div>
+    <h2 class="cta-title">Visit Today.</h2>
+    <p class="cta-quote">"Decide Tomorrow."</p>
+    <div class="cta-actions">
+      <a class="btn-primary" href="tel:7066670666">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        70666 70666
+      </a>
+      <a class="btn-outline" href="https://www.acspromoters.com" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        acspromoters.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-logo-mark"></div>
+    <span class="footer-brand-text">ACS Promoters</span>
+  </div>
+  <div class="footer-center">ACS Elegance · Premium 2 BHK · Kundrathur, Chennai</div>
+  <div class="footer-right"><a href="tel:7066670666">70666 70666</a></div>
+</footer>
+
+</body>
+</html>
